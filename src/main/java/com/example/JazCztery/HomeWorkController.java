@@ -20,10 +20,8 @@ public class HomeWorkController {
         return ResponseEntity.ok(homework);
     }
 
-    @PutMapping("/putmapping/{id}")
-    public ResponseEntity<Homework> putMapping(@PathVariable("id") String id, @RequestBody String title,
-                                               Homework homework){
-        homework.setTitle(title);
+    @PutMapping("/putmapping")
+    public ResponseEntity<Homework> putMapping(@RequestBody Homework homework){
         return ResponseEntity.ok(homework);
     }
 
